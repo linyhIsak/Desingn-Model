@@ -24,5 +24,6 @@ public class HungeryLoading {
                 System.out.println(HungeryLoading.getHungeryLoading().hashCode());
             }).start();
         }
+
     }
 }
