@@ -11,7 +11,7 @@ import com.isak.role.Manager;
 import java.util.ArrayList;
 
 /**
- *
+ * 处理请求客户端工具类
  */
 public class ChainOfResponsibilityClient {
     private ArrayList<Ratify> ratifies;
