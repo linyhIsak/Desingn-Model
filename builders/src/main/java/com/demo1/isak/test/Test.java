@@ -1,6 +1,6 @@
-package com.isak.test;
+package com.demo1.isak.test;
 
-import com.isak.builder.Computer;
+import com.demo1.isak.builder.Computer;
 
 public class Test {
     public static void main(String[] args) {

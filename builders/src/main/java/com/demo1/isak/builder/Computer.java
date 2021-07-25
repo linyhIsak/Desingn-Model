@@ -1,4 +1,4 @@
-package com.isak.builder;
+package com.demo1.isak.builder;
 
 /**
  * 计算机类
