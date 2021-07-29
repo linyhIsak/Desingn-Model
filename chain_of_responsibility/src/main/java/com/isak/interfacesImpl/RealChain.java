@@ -26,12 +26,12 @@ public class RealChain implements Ratify.Chain {
 
     @Override
     public Result proceedRequest(Request request) {
-        Result proceed = null;
+        Result result = null;
         if (ratifyList.size() > index) {
-            RealChain realChain = new RealChain(ratifyList, request, index + 1);
             Ratify ratify = ratifyList.get(index);
-            proceed = ratify.dealRequest(realChain);
+            this.index++;
+            result = ratify.dealRequest(this);
         }
-        return proceed;
+        return result;
     }
 }

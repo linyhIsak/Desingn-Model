@@ -11,14 +11,9 @@ public class Manager implements Ratify {
     @Override
     public Result dealRequest(Chain chain) {
         Request request = chain.getCurrentRequest();
-        System.out.println("Manager=====>request:" + request.toString());
         if (request.getDays() > 5) {  // 如果请假天数>5天，则自己过一遍请求，添加自己的相关意见，把请求交给上级处理
-            // 构建新的Request
-            Request newRequest = new Request.Builder().newRequest(request)
-                    .setManagerInfo(request.getName() + "每月的KPI考核还不错，可以批准")
-                    .build();
-            return chain.proceedRequest(newRequest);
-
+            // 转发处理
+            return chain.proceedRequest(request);
         }
         // 如果请假天数2<days<5,则自己处理即可，不需交给上级处理
         return new Result(true, "Manager：早点把事情办完，项目离不开你");
